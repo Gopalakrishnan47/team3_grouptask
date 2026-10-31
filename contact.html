@@ -1,110 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | DevOps Collective</title>
-    <style>
-        body {
-            background: #030b25;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-        header {
-            padding: 20px;
-            background: #091a3b;
-            text-align: center;
-        }
-        a {  color: #a78bfa; margin: 10px; }
-        main {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 40px 15px;
-        }
-        section {
-            background: #091a3b;
-            border: 1px solid #183b70;
-            border-radius: 10px;
-            padding: 25px;
-            width: 300px;
-        }
-        input, select, textarea {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0 15px;
-            background: #030b25;
-            color: white;
-            border: 1px solid #183b70;
-            border-radius: 5px;
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #813cff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
-</head>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>DevOps Collective | Contact</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="style.css"></head>
 <body>
-    <header>
-        <h3>∞ DevOps Collective</h3>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="technologies.html">Technologies</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </header>
-
-    <main>
-        <section>
-            <h1>Contact Information</h1>
-            <p>✉ Email: devopscollective@gmail.com</p>
-            <p>☎ Phone: +91 98765 43210</p>
-            <p>📍 Location: Online / Remote</p>
-            <h3>Follow Us</h3>
-            <a href="https://github.com/">GitHub</a>
-            <a href="https://www.linkedin.com/">LinkedIn</a>
-        </section>
-
-        <section>
-            <h1>Let's Connect</h1>
-            <form id="contactForm">
-                <label>Name</label>
-                <input type="text" placeholder="Enter your name" required>
-
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email" required>
-
-                <label>Subject</label>
-                <select required>
-                    <option value="">Select a subject</option>
-                    <option>General Inquiry</option>
-                    <option>Project Collaboration</option>
-                    <option>Technical Support</option>
-                </select>
-
-                <label>Message</label>
-                <textarea placeholder="Type your message..." required></textarea>
-
-                <button type="submit">➤ Send Message</button>
-                <p id="status"></p>
-            </form>
-        </section>
-    </main>
-
-    <script>
-        document.getElementById("contactForm").onsubmit = function(e) {
-            e.preventDefault();
-            document.getElementById("status").textContent =
-                "Form submitted! Connect a backend to send messages.";
-        };
-    </script>
-</body>
-</html>
+<header class="header"><div class="container nav-container"><a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-infinity"></i></span><span><strong>DevOps Collective</strong><small>Learn • Build • Grow</small></span></a><nav class="navbar"><a href="index.html">Home</a><a href="about.html">About</a><a href="technologies.html">Technologies</a><a href="projects.html">Projects</a><a href="contact.html" class="active">Contact</a></nav><a href="https://github.com/" target="_blank" class="github-btn"><i class="fa-brands fa-github"></i> Our GitHub</a></div></header>
+<section class="page-hero"><div class="container page-hero-content"><div><span class="badge">Get in Touch</span><h1>Let's <span>Connect</span></h1><p>Have a question, suggestion, or just want to say hello? We'd love to hear from you!</p></div><div class="contact-illustration"><i class="fa-solid fa-paper-plane"></i></div></div></section>
+<section class="section"><div class="container contact-grid">
+<div class="contact-info"><h2>Contact Information</h2>
+<div class="contact-item"><div class="contact-icon"><i class="fa-solid fa-envelope"></i></div><div><h3>Email</h3><p>devopscollective@gmail.com</p><small>We'll reply within 24 hours.</small></div></div>
+<div class="contact-item"><div class="contact-icon"><i class="fa-solid fa-phone"></i></div><div><h3>Phone</h3><p>+91 98765 43210</p><small>Mon - Fri, 9:00 AM - 6:00 PM</small></div></div>
+<div class="contact-item"><div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div><div><h3>Location</h3><p>Online / Remote</p><small>India</small></div></div>
+<h3 class="follow-title">Follow Us</h3><div class="social-links"><a href="#"><i class="fa-brands fa-github"></i></a><a href="#"><i class="fa-brands fa-linkedin"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a><a href="#"><i class="fa-brands fa-discord"></i></a></div>
+</div>
+<div class="contact-form-container"><h2>Send Us a Message</h2><form>
+<div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" placeholder="Enter your name" required></div>
+<div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" placeholder="Enter your email" required></div>
+<div class="form-group"><label for="subject">Subject *</label><select id="subject" required><option value="">Select a subject</option><option>General Question</option><option>Project Collaboration</option><option>DevOps Learning</option><option>Feedback</option></select></div>
+<div class="form-group"><label for="message">Message *</label><textarea id="message" rows="6" placeholder="Type your message here..." required></textarea></div>
+<button type="submit" class="btn primary-btn submit-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+</form></div>
+</div></section>
+<footer class="footer"><div class="container footer-content"><div class="footer-brand"><a href="index.html" class="logo"><span class="logo-icon"><i class="fa-solid fa-infinity"></i></span><span><strong>DevOps Collective</strong><small>Learn • Build • Grow</small></span></a></div><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="technologies.html">Technologies</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div><div class="footer-social"><a href="#"><i class="fa-brands fa-github"></i></a><a href="#"><i class="fa-brands fa-linkedin"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div></div><div class="copyright">© 2026 DevOps Collective. All rights reserved.</div></footer>
+</body></html>
